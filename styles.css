@@ -1,0 +1,42 @@
+.bodyMain {
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+   background: linear-gradient(to bottom,#0edec9,#e2b944,#232220);
+   height: 100vh;
+   background: #efefef;
+}
+.text-center {
+    text-align: center;
+}
+.active {
+    color: blue;
+}
+.heading>h1 {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: bolder;
+    color: #b32141;
+}
+.tempLogoContainer,.tempContainer {
+    display: inline-block;
+}
+.tempContainer {
+    font-size: 50px;
+}
+.detailsSection {
+    margin-top: 20px;
+}
+.placeName,.windinner,.reportDetails {
+    font-size: 22px;
+    font-weight: bold;
+    color: #202322;
+    background: rgba(59, 199, 155, 0.4);
+    padding: 25px 22px;
+    width: 210px;
+    text-transform: capitalize;
+}
+.placeHolder,.skyReport,.windDetails {
+    display: inline-block;
+}
