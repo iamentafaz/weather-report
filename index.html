@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Report App</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bodyMain">
+        <div class="main-container">
+            <div class="heading text-center">
+                <h1>Weather Report for Today</h1>
+            </div>
+            <div class="tempShowBox text-center">
+            <div class="tempLogoContainer">
+                <div id="weatherIcon"></div>
+            </div>
+            <div class="tempContainer">
+                <span id="temp"></span>
+                <span id="cen" class="active tempChange">&#176;C |</span>
+                <span id="far" class="tempChange">&#176;F</span>
+            </div>
+            </div>    
+            <div class="detailsSection text-center">
+                <div class="placeHolder">
+                    <div class="placeName">Place : <span class="place"></span></div>
+                </div>
+                <div class="skyReport">
+                    <div class="reportDetails">Sky : <span class="description"></span></div>
+                </div>
+                <div class="windDetails">
+                    <div class="windinner">Wind : <span class="windSpeed"></span> Mi/hr</div>
+                </div>
+            </div>
+        </div>
+        <script async src="scripts.js"></script>
+    </body>
+</html>

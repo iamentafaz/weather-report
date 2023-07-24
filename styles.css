@@ -3,23 +3,22 @@
     padding: 0;
 }
 .main-container {
-   background: linear-gradient(to bottom,#0edec9,#e2b944,#232220);
+   background: linear-gradient(to bottom,#eb9e3d,#dbcea8,#b7b1a3);;
    height: 100vh;
-   background: #efefef;
 }
 .text-center {
     text-align: center;
 }
 .active {
-    color: blue;
+    color: #006aff;
 }
-.heading>h1 {
+.heading > h1 {
     margin: 0;
     padding: 20px 0;
     font-weight: bolder;
-    color: #b32141;
 }
-.tempLogoContainer,.tempContainer {
+.tempLogoContainer,
+.tempContainer {
     display: inline-block;
 }
 .tempContainer {
@@ -28,15 +27,22 @@
 .detailsSection {
     margin-top: 20px;
 }
-.placeName,.windinner,.reportDetails {
+.placeName,
+.windinner,
+.reportDetails {
     font-size: 22px;
     font-weight: bold;
-    color: #202322;
-    background: rgba(59, 199, 155, 0.4);
+    color: #fff;
+    background: #000033;
     padding: 25px 22px;
     width: 210px;
     text-transform: capitalize;
+    margin-right: 1rem;
+    box-shadow: inset 2px 2px 0px 1px #ffeeff;;
 }
 .placeHolder,.skyReport,.windDetails {
     display: inline-block;
+}
+.tempChange {
+    cursor: pointer;
 }

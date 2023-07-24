@@ -1,2 +1,2 @@
 # weather-report
-Weather Report Freecodecamp Project
+Weather Report based on Lat and Long

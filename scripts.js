@@ -1,4 +1,6 @@
 getLocation();
+
+
 function getLocation() {
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getWeatherInfo);
@@ -10,12 +12,11 @@ function getLocation() {
 function getWeatherInfo(position) {
   let long = position.coords.longitude;
   let lati = position.coords.latitude;
-  console.log(long,lati);
-  var xhttp = new XMLHttpRequest();
+  const xhttp = new XMLHttpRequest();
   xhttp.open("GET", "https://fcc-weather-api.glitch.me/api/current?lat="+lati+"&lon="+long+"", true);
   xhttp.send();
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       loadDetailsOfThePage(this.responseText);
     }
   };
@@ -30,19 +31,19 @@ function loadDetailsOfThePage(data) {
     let description = details.weather[0].description;
     let windSpeed = details.wind['speed'];
     document.getElementById('weatherIcon').innerHTML = "<img src="+iconSrc+">";
-    document.getElementById("temp").innerHTML = temp;
+    document.getElementById("temp").innerHTML = parseInt(temp);
     document.querySelector('.placeHolder .place').innerHTML = name;
     document.querySelector('.reportDetails .description').innerHTML = description;
     document.querySelector('.windinner .windSpeed').innerHTML = windSpeed;
 }
-document.getElementById('far').addEventListener('click',()=> {
+document.getElementById('far').addEventListener('click', ()=> {
     document.getElementsByClassName('tempChange')[0].classList.toggle('active');
     document.getElementsByClassName('tempChange')[1].classList.toggle('active');
     let c = document.getElementById("temp").innerHTML;
     let f = Math.floor((9*c + 160)/5);
     document.getElementById("temp").innerHTML = f;
 });
-document.getElementById('cen').addEventListener('click',()=> {
+document.getElementById('cen').addEventListener('click', ()=> {
     document.getElementsByClassName('tempChange')[0].classList.toggle('active');
     document.getElementsByClassName('tempChange')[1].classList.toggle('active');
     let f = document.getElementById("temp").innerHTML;
